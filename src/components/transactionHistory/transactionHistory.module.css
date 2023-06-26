@@ -1,0 +1,28 @@
+.transactionHistory {
+    width: 75%;
+    border-collapse: collapse;
+  }
+  
+  .headTable {
+    background-color: aquamarine;
+  }
+  
+  .headTable th {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .bodyTable td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  
+
+  .bodyList::first-letter {
+    text-transform: uppercase;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: lightgray;
+  }
