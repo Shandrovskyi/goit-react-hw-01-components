@@ -1,33 +1,29 @@
-import { PageMain } from "components/pageMain/pageMain";
-import user from "./user.json";
+import { Profile } from './Profile/Profile';
+import user from '../data/user.json';
 
+import { Statistics } from './statistics/statistics';
+import data from '../data/data.json';
 
-import {Statistics} from "components/statistics/statistics";
-import data from "./data.json";
+import { FriendList } from './friendList/friendList';
+import friends from '../data/friends.json';
 
-
-import {FriendList} from "components/friendList/friendList";
-import friends from "./friends.json";
-
-import { TransactionHistory } from "./transactionHistory/transactionHistory";
-import transactions from "./transactions.json";
-
+import { TransactionHistory } from './transactionHistory/transactionHistory';
+import transactions from '../data/transactions.json';
 
 export const App = () => {
   return (
-    <div 
+    <div
       style={{
-        height: '300vh',
+        height: '350vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
-        
+        color: '#010101',
       }}
     >
-      <PageMain 
+      <Profile
         username={user.username}
         tag={user.tag}
         location={user.location}
@@ -35,12 +31,9 @@ export const App = () => {
         stats={user.stats}
       />
 
-    
-    <Statistics title="Upload stats" stats={data} />
-    <FriendList friends={friends} />
-    <TransactionHistory items={transactions} />
-
-
+      <Statistics title="Upload stats" stats={data} />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
